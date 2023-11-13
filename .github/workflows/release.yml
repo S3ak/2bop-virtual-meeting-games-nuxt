@@ -32,8 +32,6 @@ jobs:
         with:
           version: 8
       - run: pnpm i
-      - run: pnpm run semantic-release
-      - name: Release
+      - run: pnpm dlx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: pnpm dlx semantic-release
