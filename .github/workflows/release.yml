@@ -4,8 +4,6 @@
 name: Release
 
 on:
-  push:
-    branches: ["master", "next", "beta", "*.x", "staging"]
   pull_request:
     branches: ["master"]
 
