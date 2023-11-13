@@ -19,7 +19,8 @@
     "node_modules",
     "coverage",
     "nuxt.config.ts",
-    "playwright.config.ts"
+    "playwright.config.ts",
+    "pnpm-lock.yaml"
   ],
   "parser": "vue-eslint-parser",
   "parserOptions": {
