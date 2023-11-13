@@ -4,17 +4,16 @@
 name: Release
 
 on:
-  push:
-    branches: ["master", "next", "beta", "*.x", "staging"]
   pull_request:
     branches: ["master"]
 
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
 jobs:
   build:
-    permissions:
-      contents: write
-      issues: write
-      pull-requests: write
     runs-on: ubuntu-latest
 
     strategy:
@@ -31,8 +30,6 @@ jobs:
         with:
           version: 8
       - run: pnpm i
-      - run: pnpm run semantic-release
-      - name: Release
+      - run: pnpm dlx semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpm dlx semantic-release
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
