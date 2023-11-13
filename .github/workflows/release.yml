@@ -25,9 +25,9 @@ jobs:
       - name: Use pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
-      - run: pnpm i
-      - run: pnpm run semantic-release
+          version: ${{ matrix.node-version }}
+      - run: npm i
+      - run: npm run semantic-release
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
