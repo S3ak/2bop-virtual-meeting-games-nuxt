@@ -11,6 +11,10 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
 
     strategy:
@@ -26,9 +30,9 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 8
-      - run: npm i
-      - run: npm run semantic-release
+      - run: pnpm i
+      - run: pnpm run semantic-release
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: pnpm dlx semantic-release
