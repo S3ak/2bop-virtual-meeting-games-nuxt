@@ -9,9 +9,8 @@
     "standard-with-typescript",
     "plugin:vue/vue3-essential",
     "eslint:recommended",
-    "prettier",
     "@nuxtjs/eslint-config-typescript",
-    "plugin:prettier/recommended"
+    "prettier"
   ],
   "ignorePatterns": [
     "dist",
