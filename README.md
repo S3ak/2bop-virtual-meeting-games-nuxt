@@ -1,5 +1,7 @@
 # Nuxt 3 Minimal Starter
 
+A series of games to play with your remote team.
+
 - [Production Deploy](https://2bop-virtual-call-games.netlify.app/)
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
